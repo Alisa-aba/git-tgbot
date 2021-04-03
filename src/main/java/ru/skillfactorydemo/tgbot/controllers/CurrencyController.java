@@ -1,10 +1,7 @@
 package ru.skillfactorydemo.tgbot.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-
-
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ru.skillfactorydemo.tgbot.dto.ValuteCursOnDate;
@@ -18,8 +15,8 @@ import java.util.List;
 public class CurrencyController  {
 
     private final CentralRussianBankService centralRussianBankService;
-    @Autowired
-    @PostMapping("/getCurrencies")
+
+    @GetMapping("/getCurrencies")
     public List<ValuteCursOnDate> getValuteCursOnDate() throws Exception {
         return centralRussianBankService.getCurrenciesFromCbr();
     }

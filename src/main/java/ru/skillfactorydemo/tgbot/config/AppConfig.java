@@ -16,10 +16,14 @@ import ru.skillfactorydemo.tgbot.service.CentralRussianBankService;
 import javax.xml.soap.MessageFactory;
 import javax.xml.soap.SOAPConstants;
 import javax.xml.soap.SOAPException;
+
 import java.nio.charset.StandardCharsets;
 
 @Configuration
+
 public class AppConfig {
+
+
 
     @Bean
     public CentralRussianBankService cbrService() throws SOAPException {
